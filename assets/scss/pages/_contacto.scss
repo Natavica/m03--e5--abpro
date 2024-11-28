@@ -1,0 +1,112 @@
+
+
+
+.contacto{
+  margin: 3rem 0rem;
+  @include mx-auto;
+}
+
+.contacto_row_col{
+  h2{
+    font-weight: 600;
+  }
+}
+
+
+.form_botton{
+  button{
+@include botonm;
+font-size: 1rem;
+width: 100%;
+    }
+  }
+
+.mapa{
+  padding: 2rem 0rem 5rem 0rem;
+  h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+form {
+	
+  .form-control {
+    @include styles_input_form;
+		border-radius: 1rem;
+    margin-bottom: 15px;
+		
+    &.thick {
+      height: 3.3rem;
+    }
+		
+		&:focus {
+      @include styles_input_form;
+		}
+  }
+
+	.message .form-control {
+			padding: .5rem 1.8rem;
+	}
+
+  input,
+  textarea {
+    font-size: 1.1rem;
+  }
+
+	::placeholder {
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $third-color;
+    position: relative;
+    left: 0;
+  }
+
+}
+
+.input-group-text{
+  font-size: 100px;
+}
+
+
+
+@media (max-width: 780px) {
+  .mapa_contenedor {
+    iframe{
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+ }
+
+@media (min-width: 781px) and (max-width: 1280px) {
+  .mapa_contenedor {
+    iframe{
+      width: 100%;
+      height: 600px;
+    }
+  }
+
+ }
+
+ @media (min-width: 1281px) {
+  .mapa_contenedor {
+    iframe{
+      width: 100%;
+      height: 800px;
+    }
+  }
+
+ }
+
+
+
+
+
+
+
+ 

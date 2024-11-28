@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Espacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+</head>
+
+<body>
+    <div class="body__container">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/logo--swh.png" alt="logo starwars hospital" class="navbar__img">
+                    </a>
+                    <div class="navbar__icon" onclick="toggleMenu()">
+                        &#9776;
+                    </div>
+                    <ul class="navbar__links" id="navLinks">
+                        <li class="navbar__links__item"><a href="index.html">Home</a></li>
+                        <li class="navbar__links__item"><a href="equipo.html">Equipo</a></li>
+                        <li class="navbar__links__item"><a href="contacto.html">Contacto</a></li>
+                        <li class="navbar__links__item"><a href="gestion.html">Gestión</a></li>
+                        <li class="navbar__links__item"><a href="citas.html">Citas</a></li>
+                        <li class="navbar__links__item navbar__links__item--cta"><a id="reserva">Reserva tu cita</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section section--bienvenida">
+                <h1 class="section__title--primary"> </h1>
+                <h2 class="section__title">Nuestro compromiso</h2>
+                <p class="section__text">
+                <p>
+                    Nuestro equipo de profesionales altamente capacitados y nuestras tecnologías de vanguardia están a
+                    tu disposición para garantizar que recibas los cuidados más efectivos, compasivos y adaptados a tus
+                    necesidades, sin importar de qué sistema estelar provengas.
+
+                    En Star Wars Hospital, la salud no tiene fronteras, y juntos navegaremos hacia un futuro más
+                    saludable y brillante. ¡Que la Fuerza de la sanación esté contigo!</p>
+                </p>
+            </section>
+
+            <section class="section section--equipo">
+                <h2 class="section__title">Te presentamos a nuestro equipo de profesionales</h2>
+                <p class="section__text">En Star Wars Hospital, contamos con un equipo de élite conformado por expertos
+                    médicos, científicos y especialistas de todos los rincones de la galaxia. Cada uno de nuestros
+                    profesionales aporta un profundo conocimiento en su campo, desde la biomedicina espacial hasta la
+                    cirugía interplanetaria, y están comprometidos con la salud y el bienestar de nuestros pacientes.
+                </p>
+
+                <h2>Citas</h2>
+                <h2>Listado citas</h2>
+               
+                <table id="listado-citas">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Rut</th>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Listado de citas se mostrarán aquí -->
+                    </tbody>
+                  </table>
+
+
+                  <div class="">
+                    <input type="text" class="form-control" id="nombre">
+            
+                    <button type="button" class="btn btn-primary mt-2" id="agendar">Agendar</button>
+                  </div>
+            
+                  <div class="" id="pacientes-por-atender">
+
+                  </div>
+            
+                  <div class="">
+                    <div class="">
+                      <button type="button" class="btn btn-primary" id="atender">Atender</button>
+                    </div>
+                  </div>
+
+                  </div>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Reserva tu cita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <ul>
+                        <li>+GSW-1200-77-1138</li>
+                        <li>hospital@estarwars.com</li>
+                        <li>Órbita de la Estrella Polis Mass, 12.5</li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <div class="icon social-icons">
+                        <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                        <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Hospital Star Wars.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/pila_cola.js"></script>
+    <script src="assets/js/citas.js"></script>
+    <script src="assets/js/prompt.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+
+</body>
+
+</html>

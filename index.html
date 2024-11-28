@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Espacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+</head>
+
+<body>
+    <div class="body__container">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="index.html" class="logo" tabindex="0">
+                        <img src="assets/images/logo--swh.png" alt="logo starwars hospital" class="navbar__img">
+                    </a>
+                    <div class="navbar__icon" onclick="toggleMenu()">
+                        &#9776;
+                    </div>
+                    <ul class="navbar__links" id="navLinks">
+                        <li class="navbar__links__item"><a href="index.html">Home</a></li>
+                        <li class="navbar__links__item"><a href="equipo.html">Equipo</a></li>
+                        <li class="navbar__links__item"><a href="contacto.html">Contacto</a></li>
+                        <li class="navbar__links__item"><a href="gestion.html">Gestión</a></li>
+                        <li class="navbar__links__item"><a href="citas.html">Citas</a></li>
+                        <li class="navbar__links__item navbar__links__item--cta"><a id="reserva">Reserva tu
+                                cita</a></li>
+                    </ul> 
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section section--bienvenida">
+                <h1 class="section__title--primary"> </h1>
+                <div class="container__section__title">
+                    <h2 class="section__title" tabindex="2">Nuestra misión es que la fuerza te acompañe</h2>
+                </div>
+
+                <div class="container__hospital">
+                    <div class="section__text">
+                        <div>
+                            <p class="section__title--mision">Misión</p>
+                            <p class="">En <i>Star Wars Hospital</i>, nuestra misión es brindar atención médica de
+                                excelencia a seres de todas las especies y sistemas estelares, utilizando tecnologías
+                                avanzadas, conocimientos intergalácticos y un equipo multidisciplinario de
+                                profesionales. </p>
+                        </div>
+                        <br>
+                        <div>
+                            <p class="section__title--vision">Visión</p>
+                            Ser el hospital de referencia en la galaxia, liderando el cuidado de la salud en el espacio
+                            mediante la innovación constante, la investigación avanzada y el desarrollo de tecnologías
+                            médicas futuristas. Aspiramos a convertirnos en un símbolo de esperanza y sanación, donde
+                            cualquier ser, sin importar su origen o ubicación en el cosmos, encuentre la atención médica
+                            necesaria para una vida saludable y plena.
+                        </div>
+                    </div>
+                    <div class="section__img">
+                        <img src="assets/images/hospital.jpeg" alt="Hospital">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--servicios">
+                <h2 class="section__title">Servicios</h2>
+                <div class="cards__container cards__container--servicios">
+                    <div class="card">
+                        <div class="card--top">
+                            <div class="icon card__icon">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <h3 class="card__title ">Consultas</h3>
+                        </div>
+                        <div class="card__line"></div>
+                        <div class="card--bottom">
+                            <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+                                laborum recusandae velit saepe, dignissimos, nobis voluptatibus amet hic impedit
+                                repellendus accusamus, magni quas dolorum? Exercitationem quibusdam quam delectus
+                                excepturi culpa!</p>
+                        </div>
+                    </div>
+                    <article class="card">
+                        <div class="card--top">
+                            <div class="icon card__icon">
+                                <i class="fa-solid fa-suitcase-medical"></i>
+                            </div>
+                            <h3 class="card__title ">Urgencias</h3>
+                        </div>
+                        <div class="card__line"></div>
+                        <div class="card--bottom">
+                            <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+                                laborum recusandae velit saepe, dignissimos, nobis voluptatibus amet hic impedit
+                                repellendus accusamus, magni quas dolorum? Exercitationem quibusdam quam delectus
+                                excepturi culpa!</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card--top">
+                            <div class="icon card__icon">
+                                <i class="fa-solid fa-hand-holding-medical"></i>
+                            </div>
+                            <h3 class="card__title">Especialidades</h3>
+                        </div>
+                        <div class="card__line"></div>
+                        <div class="card--bottom">
+                            <p class="card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
+                                laborum recusandae velit saepe, dignissimos, nobis voluptatibus amet hic impedit
+                                repellendus accusamus, magni quas dolorum? Exercitationem quibusdam quam delectus
+                                excepturi culpa!</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section section--testimonios">
+                <h2 class="section__title titillium-web-bold">Testimonios</h2>
+                <div class="cards__container cards__container--testimonios">
+                    <article class="card">
+                        <p class="card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat, dicta cum
+                            repellendus sed molestiae, expedita eaque tenetur nesciunt rem quasi quam inventore libero
+                            voluptatum nihil. Culpa doloremque dolorem sed.
+                            <br>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </p>
+                        <br>
+                        <p><i class="card__text--name">Armando Casas </i><span class="card__text--date">Diciembre,
+                                2024</span></p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat, dicta cum
+                            repellendus sed molestiae, expedita eaque tenetur nesciunt rem quasi quam inventore libero
+                            voluptatum nihil. Culpa doloremque dolorem sed.
+                            <br>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </p>
+                        <br>
+                        <p><i class="card__text--name">Armando Casas </i><span class="card__text--date">Diciembre,
+                                2024</span></p>
+                    </article>
+                    <article class="card">
+                        <p class="card__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quaerat, dicta cum
+                            repellendus sed molestiae, expedita eaque tenetur nesciunt rem quasi quam inventore libero
+                            voluptatum nihil. Culpa doloremque dolorem sed.
+                            <br>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                        </p>
+                        <br>
+                        <p><i class="card__text--name">Armando Casas </i><span class="card__text--date">Diciembre,
+                                2024</span></p>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Reserva tu cita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <ul>
+                        <li>+GSW-1200-77-1138</li>
+                        <li>hospital@estarwars.com</li>
+                        <li>Órbita de la Estrella Polis Mass, 12.5</li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <div class="icon social-icons">
+                        <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                        <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Hospital Star Wars.</p>
+            </div>
+        </footer>
+    </div>
+
+     <script src="assets/js/prompt.js"></script>
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>

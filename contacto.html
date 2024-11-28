@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Espacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+</head>
+
+<body>
+    <div class="body__container">
+
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/logo--swh.png" alt="logo starwars hospital" class="navbar__img">
+                    </a>
+                    <div class="navbar__icon" onclick="toggleMenu()">
+                        &#9776;
+                    </div>
+                    <ul class="navbar__links" id="navLinks">
+                        <li class="navbar__links__item"><a href="index.html">Home</a></li>
+                        <li class="navbar__links__item"><a href="equipo.html">Equipo</a></li>
+                        <li class="navbar__links__item"><a href="contacto.html">Contacto</a></li>
+                        <li class="navbar__links__item"><a href="gestion.html">Gestión</a></li>
+                        <li class="navbar__links__item"><a href="citas.html">Citas</a></li>
+                        <li class="navbar__links__item navbar__links__item--cta"><a id="reserva">Reserva tu cita</a>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section section--bienvenida">
+            </section>
+
+            <div class="sections__container">
+                <section class="section section--contacto">
+                    <h2 class="section__title">Te contactaremos</h2>
+                    <form class="contact-form" action="#" method="post">
+                        <fieldset>
+                            <legend>Ingresa tus datos y deja tu consulta</legend>
+
+                            <div>
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico"
+                                    required>
+                            </div>
+
+                            <div>
+                                <label for="asunto">Asunto:</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+                            </div>
+
+                            <div>
+                                <label for="mensaje">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit">Enviar Mensaje</button>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <section class="section section--encuentranos">
+                    <h2 class="section__title">Encuentranos</h2>
+                    <iframe class="map" frameborder="0"
+                        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d32656769.449703947!2d-97.97062359713102!3d-2.364247197158595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x9662c5410425af2f%3A0x8475d53c400f0931!2sSantiago%2C%20Regi%C3%B3n%20Metropolitana!3m2!1d-33.448889699999995!2d-70.6692655!4m5!1s0x88dd7fe2ec9a927b%3A0xd8b243af0ea9ce22!2sStar%20Wars%3A%20Galaxy&#39;s%20Edge%2C%20351%20S%20Studio%20Dr%2C%20Lake%20Buena%20Vista%2C%20FL%2032830%2C%20Estados%20Unidos!3m2!1d28.3546952!2d-81.56159939999999!5e0!3m2!1ses!2scl!4v1729380875437!5m2!1ses!2scl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </iframe>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Reserva tu cita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <ul>
+                        <li>+GSW-1200-77-1138</li>
+                        <li>hospital@estarwars.com</li>
+                        <li>Órbita de la Estrella Polis Mass, 12.5</li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <div class="icon social-icons">
+                        <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                        <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Hospital Star Wars.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/prompt.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+
+</html>

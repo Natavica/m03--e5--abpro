@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Espacial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+</head>
+
+<body>
+    <div class="body__container">
+        <header>
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/logo--swh.png" alt="logo starwars hospital" class="navbar__img">
+                    </a>
+                    <div class="navbar__icon" onclick="toggleMenu()">
+                        &#9776;
+                    </div>
+                    <ul class="navbar__links" id="navLinks">
+                        <li class="navbar__links__item"><a href="index.html">Home</a></li>
+                        <li class="navbar__links__item"><a href="equipo.html">Equipo</a></li>
+                        <li class="navbar__links__item"><a href="contacto.html">Contacto</a></li>
+                        <li class="navbar__links__item"><a href="gestion.html">Gestión</a></li>
+                        <li class="navbar__links__item"><a href="citas.html">Citas</a></li>
+                        <li class="navbar__links__item navbar__links__item--cta"><a id="reserva">Reserva tu cita</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section section--bienvenida">
+                <h1 class="section__title--primary"> </h1>
+                <h2 class="section__title">Gestión</h2>
+                <p class="section__text">
+                <p>
+                    Implementa estructuras de datos en el sitio web del hospital para gestionar mejor la información de los doctores:
+                    <br>
+                    - <b>Arreglos:</b> Utiliza un arreglo para almacenar la lista de doctores. Implementa operaciones como agregar, eliminar y buscar doctores dentro del arreglo.
+                    <br>
+                    - <b>Pilas:</b> Implementa una pila para gestionar las citas de los pacientes (última cita agendada, próxima cita a atender, etc.).
+                    <br>
+                    - <b>Colas:</b>Crea una cola para simular el orden de llegada de los pacientes en la página de contacto.
+                    </p>
+                </p>
+            </section>
+
+            <section class="section section--equipo">
+
+                <h2>Agregar Médico</h2>
+                <form id="formMedico">
+                  <input type="text" id="nombre" placeholder="Nombre" required>
+                  <input type="text" id="especialidad" placeholder="Especialidad" required>
+                  <input type="text" id="experiencia" placeholder="Experiencia" required>
+                  <input type="text" id="disponibilidad" placeholder="Disponibilidad" required>
+                  <button type="submit">Agregar Médico</button>
+                </form>
+                <table id="tablaMedicos">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Especialidad</th>
+                      <th>Experiencia</th>
+                      <th>Disponibilidad</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Los médicos se mostrarán aquí -->
+                  </tbody>
+                </table>
+
+                <br>
+                <br>
+                <h2>Buscar Médicos</h2>
+                    <!-- Campo de búsqueda -->
+                    <input type="text" id="buscarNombre" placeholder="Buscar por nombre">
+
+                    <!-- Botón de búsqueda -->
+                    <button id="buscarBtn">Buscar</button>
+
+                    <table id="tablaBusqueda">
+                        <thead>
+                          <tr>
+                            <th>Nombre</th>
+                            <th>Especialidad</th>
+                            <th>Experiencia</th>
+                            <th>Disponibilidad</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Los médicos se mostrarán aquí -->
+                        </tbody>
+                      </table>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__section">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="equipo.html">Equipo</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Reserva tu cita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <ul>
+                        <li>+GSW-1200-77-1138</li>
+                        <li>hospital@estarwars.com</li>
+                        <li>Órbita de la Estrella Polis Mass, 12.5</li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <div class="icon social-icons">
+                        <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                        <a href="#" class="fab fa-twitter" aria-label="Twitter"></a>
+                        <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Hospital Star Wars.</p>
+            </div>
+        </footer>
+    </div>
+
+ 
+    <script src="assets/js/prompt.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/clone.js"></script>
+    <script src="./assets/js/estructuraDatos.js"></script>
+</body>
+
+</html>
