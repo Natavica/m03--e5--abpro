@@ -24,7 +24,7 @@ fetch('./assets/js/equipo.json') // Nueva ruta al JSON
             <p><strong>Reseña:</strong> ${doctor.resena}</p>
             <p><strong>Experiencia:</strong> ${doctor.experiencia}</p>
             <p><strong>Disponibilidad:</strong> ${doctor.disponibilidad}</p>
-            <p><strong>Horario:</strong> ${doctor.horario}</p>
+            <p><strong>Horario:</strong> ${imprimirHorario(doctor)}</p>
             <p><strong>Contacto:</strong> ${doctor.contacto}</p>
             <p><strong>Valor base consulta:</strong> ${valorCLP(doctor.costo.base)}</p>
             <p><strong>Valor c/bonificación:</strong> ${calcularBonificacion(doctor)}</p>
@@ -62,4 +62,19 @@ function calcularBonificacion(doctor)
     const aplicarBonificacion = (costo) => (descuento) => costo - costo * descuento;
     const valorConBonificacion = (costo) => aplicarBonificacion(costo)(doctor.costo.bonificacion)
     return valorCLP(valorConBonificacion(doctor.costo.base))
+}
+
+function imprimirHorario(doctor, total = "", index = 0)
+{
+    if(index < doctor.horario.length)
+    {
+        total += `${doctor.horario[index]}`;
+        index++;
+        if(index < doctor.horario.length)
+        {
+            total += ", ";
+        }
+        return imprimirHorario(doctor, total, index);
+    }
+    else return total;
 }
