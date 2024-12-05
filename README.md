@@ -31,11 +31,29 @@ En este proyecto se integran todos los conceptos avanzados de JavaScript para me
 
 ### 1. Manipulación de Datos con JSON y Simulación de API REST
 
-Se creó el archivo `equipo.json`, que contiene la siguiente información para cada doctor: nombre, especialidad, reseña, foto, experiencia, disponibilidad, horario, datos de contacto y costo de consulta.
+Revisar *filter.js* y se muestra en *equipo.html*, específicamente en el div que contiene el id="doctor-list"
 
-Se desarrolló la simulación de datos en los archivos `equipo.html` y `filter.js`. Se utilizó el método fetch para obtener los datos desde una API simulada y se definió la función `displayDoctors`, encargada de renderizar la lista de doctores en el archivo HTML.
+*Uso de JSON para Manejo de Información*
 
-Además, se implementaron las funcionalidades de clonación y fusión en los archivos `clone.js` y `equipo.html`.
+El código utiliza un archivo JSON (./assets/js/equipo.json) como fuente de información para los doctores. Este archivo contiene detalles como el nombre, especialidad, experiencia, disponibilidad, horarios y costos de cada doctor.
+
+*Simulación de Obtención de Datos desde una API REST*
+
+El código utiliza fetch() para simular la obtención de datos desde una API REST. Aunque los datos están almacenados localmente en el archivo JSON, el uso de fetch() imita cómo un cliente web solicita datos desde un servidor.
+
+*Carga Dinámica de Información en la Interfaz*
+
+Los datos obtenidos del JSON se procesan y se generan dinámicamente elementos HTML para mostrar la información de los doctores en la página. Esto se logra con el método displayDoctors(), que utiliza document.createElement y actualiza el DOM.
+
+*Operaciones con los Datos JSON*
+
+*Recorrido de Datos* (Revisar en la consola de equipo.html)
+
+El código recorre el JSON utilizando métodos como forEach() para iterar sobre los doctores y procesar su información.
+
+*Clonación y Fusión* (Revisar en la consola de equipo.html)
+
+Aunque no hay ejemplos explícitos de clonación o fusión en el código compartido, es posible implementar estas operaciones, por ejemplo, para duplicar datos o combinar información de varias fuentes JSON.
 
 
 ### 2. Implementación de Algoritmos y Estructuras de Datos
