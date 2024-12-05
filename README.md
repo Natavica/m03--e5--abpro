@@ -31,6 +31,13 @@ En este proyecto se integran todos los conceptos avanzados de JavaScript para me
 
 ### 1. Manipulación de Datos con JSON y Simulación de API REST
 
+Se creó el archivo `equipo.json`, que contiene la siguiente información para cada doctor: nombre, especialidad, reseña, foto, experiencia, disponibilidad, horario, datos de contacto y costo de consulta.
+
+Se desarrolló la simulación de datos en los archivos `equipo.html` y `filter.js`. Se utilizó el método fetch para obtener los datos desde una API simulada y se definió la función `displayDoctors`, encargada de renderizar la lista de doctores en el archivo HTML.
+
+Además, se implementaron las funcionalidades de clonación y fusión en los archivos `clone.js` y `equipo.html`.
+
+
 ### 2. Implementación de Algoritmos y Estructuras de Datos
 
 ### 3. Programación Funcional
