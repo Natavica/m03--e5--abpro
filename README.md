@@ -77,6 +77,5 @@ Los siguientes botones hacen un recorrido del array empleando la funcion info(),
 
 ### 5. Programación Asíncrona y Eventos 
 
-
-
-
+En `pila_cola.js` se implementó una parte implícita de la simulación del registro de citas: la obtención de la información de un doctor. 
+Se crearon botones visibles en la vista `citas.html` que utilizando elementos de programacion asincrona obtienen la info de su eminencia el "Dr. Kurtis Weissnat". Se emplean async/await, promesas y event listeners asociados a cada botón.
