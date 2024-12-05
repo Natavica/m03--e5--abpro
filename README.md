@@ -42,7 +42,13 @@ Además, se reemplazó la impresión directa del arreglo de horarios por la func
 
 ### 4. Programación Orientada a Objetos
 
+En `poo.json`, se crearon las clases solicitadas para Doctor, Cirujano, Pediatra. Se agregaron getter y setters solicitados. Se agregaron las funciones para devolver el costo de la consulta y la disponibilidad.
 
+Se agregó una función que lee el archivo JSON de los Doctores y lo asigna a la clase correspondiente (en este caso habian 2 Cirujanos, los cuales se crearon de acuerdo a la info rescatada desde el JSON; el resto quedo como Doctor)
+
+Para esto en la vista `citas.html` se agregaron 4 botones. 
+El primero crea los objetos y los almacena en un array
+Los siguientes botones hacen un recorrido del array empleando la funcion info(), getCosto() y getAgenda() respectivamente.  
 
 ### 5. Programación Asíncrona y Eventos 
 
