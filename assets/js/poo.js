@@ -71,28 +71,6 @@ class Doctor {
   }
 };
 
-function getDoctoresJSON(){
-  let drs = [];
-  fetch('./assets/js/equipo.json')
-    .then(response => {
-      if (!response.ok) { 
-      }
-      return response.json(); 
-    })
-    .then(data => {
-        function readDoctors(doctors) {
-          doctors.forEach(doctor => {
-            drs.push(new Doctor(doctor.nombre, doctor.especialidad, doctor.experiencia, doctor.costo.base));
-          })
-        }
-        readDoctors(data);
-       }).catch(error => {
-      console.error('Error al cargar el archivo JSON:', error);
-    });
-    return drs;
-  };
-const doctores = getDoctoresJSON();
-console.log(doctores);
 /**
  * 2. Subclase Cirujano
  * Definición de una subclase que extiende la clase Doctor.
@@ -105,7 +83,7 @@ class Cirujano extends Doctor {
 
   // Sobrescribir el método saludar para incluir información adicional
   info() {
-    return `Nombre: ${this.nombre}, especialidad: Cirugía ${this.especialidad}, experiencia: ${this.anos_exp} años.`;  
+    return `Nombre: ${this.nombre}, especialidad: Cirujano ${this.especialidad}, experiencia: ${this.anos_exp} años.`;  
   }
 
   getOperaciones() {
@@ -114,7 +92,7 @@ class Cirujano extends Doctor {
   getCantidadOperaciones() {
     return this.arrayOperaciones.length;
   }
-}
+};
 
 /**
  * 3. Subclase Pediatra
@@ -130,38 +108,59 @@ class Pediatra extends Doctor {
   info() {
     return `${super.info()}`;
   }
+};
+
+const drs = new Array();
+async function getDoctoresJSON(){
+  await fetch('./assets/js/equipo.json')
+    .then(response => {
+      if (!response.ok) { 
+      }
+      return response.json(); 
+    })
+    .then(data => {
+        function readDoctors(doctors) {
+          doctors.forEach( (doctor,index) => {
+            if(doctor.especialidad === "Cirugía") {
+              drs[index] = new Cirujano(doctor.nombre, doctor.especialidad, doctor.experiencia, doctor.costo.base);              
+              //drs.push(new Cirujano(doctor.nombre, doctor.especialidad, doctor.experiencia, doctor.costo.base));
+              console.log(drs[index]);
+            }
+            else {
+              drs[index] = new Doctor(doctor.nombre, doctor.especialidad, doctor.experiencia, doctor.costo.base);              
+              //drs.push(new Doctor(doctor.nombre, doctor.especialidad, doctor.experiencia, doctor.costo.base));
+              console.log(drs[index]);
+            }
+          })
+        }
+        readDoctors(data);
+       }).catch(error => {
+      console.error('Error al cargar el archivo JSON:', error);
+    });
+    console.log(drs);
+    console.log(drs.length);
+    outputPOO.textContent = `Doctores:\n${drs}`;
+  };
+
+function infoDocs() {
+  resultado = "";
+  drs.forEach(doctor => {resultado = resultado + doctor.info()+'\n';})
+  outputPOO.textContent = resultado;
 }
 
-function crearObjetoConClase() {
-  const conan = new Doctor("Conan", "Carnicero", 20);
-  const mensaje = conan.info();
-  console.log("Doctor:", mensaje);
-  const paciente = {nombre: "Ana", fecha: "01-09-2024", hora: "12:00", descripción: "consulta"};
-  conan.getPacientes().push(paciente);
-  console.log("Doctor:", conan.getPacientes());
-  const pac = conan.getCantidadPacientes();
-  outputPOO.textContent = `Doctor:\n${mensaje}\n pacientes atendidos: ${pac}`;
-
+function costoDocs() {
+  resultado = "";
+  drs.forEach(doctor => {resultado = resultado + doctor.nombre + " " + doctor.getCostoConsulta()+'\n';})
+  outputPOO.textContent = resultado;
 }
 
-function demostrarHerencia() {
-  const maria = new Cirujano("María", "Digestiva", 15);
-  const mensaje = maria.info();
-  console.log("Herencia:", mensaje);
-  const operacion = {nombre: "Juan", fecha: "13-10-2024", descripción: "Extraccion de higado"};
-  maria.getOperaciones().push(operacion);
-  const oper = maria.getCantidadOperaciones();
-  console.log("Herencia:", maria.getOperaciones());
-  console.log("Operaciones realizadas:", oper);
-
-  const paciente1 = {nombre: "Luis", fecha: "11-10-2024", hora: "11:00", descripción: "consulta1"};
-  const paciente2 = {nombre: "Hugo", fecha: "17-10-2024", hora: "11:20", descripción: "consulta2"};
-  maria.getPacientes().push(paciente1);
-  maria.getPacientes().push(paciente2);
-  const pac = maria.getCantidadPacientes();
-  console.log("Herencia:", maria.getPacientes());
-  outputPOO.textContent = `Herencia:\n${mensaje}\nPacientes atendidos: ${pac}\nOperaciones realizada: ${oper}`;
+function agendaDocs() {
+  resultado = "";
+  drs.forEach(doctor => {resultado = resultado + doctor.nombre + " " + doctor.getAgenda()+'\n';})
+  outputPOO.textContent = resultado;
 }
 
-window.crearObjetoConClase = crearObjetoConClase;
-window.demostrarHerencia = demostrarHerencia;
+window.getDoctoresJSON = getDoctoresJSON;
+window.infoDocs = infoDocs;
+window.costoDocs = costoDocs;
+window.agendaDocs = agendaDocs;
